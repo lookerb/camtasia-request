@@ -18,7 +18,6 @@ requires = [
     'pyramid-jinja2==2.5',
     'pyramid-mailer==0.14.1',
     'BTrees==4.1.2',
-    'CourseCombine==0.0',
     'Jinja2==2.7.3',
     'Mako==1.0.1',
     'MarkupSafe==0.23',
