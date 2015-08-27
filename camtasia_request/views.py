@@ -36,7 +36,7 @@ def logout(request):
     request.session.invalidate()
     return HTTPFound(location=request.registry.settings['REDIRECT_AFTER_LOGOUT'])
 
-#@view_config(route_name='login', renderer='templates/login.pt')
+@view_config(route_name='/', renderer='templates/login.jinja2')
 @view_config(route_name='login', renderer='templates/login.jinja2')
 def login(request):
     '''
@@ -59,7 +59,6 @@ def login(request):
     return {'auth_url': auth_url, 'csrf_token': csrf_token}
 
 
-#@view_config(route_name='request', renderer='templates/request.pt')
 @view_config(route_name='request', renderer='templates/request.jinja2')
 def request_form(request):
     '''
@@ -90,8 +89,7 @@ def request_form(request):
 
     if form.course.choices == []:
         request.session.flash('No courses were found in D2L for this semester. \
-            Please <a href="http://www.uwosh.edu/d2lfaq/d2l-login">log into \
-            D2L</a> to confirm you have classes in D2L.')
+            Please log into D2L to confirm you have classes this semester.')
 
         return {'form': form, 'csrf_token': csrf_token}
 
@@ -107,7 +105,6 @@ def request_form(request):
         return {'form': form, 'csrf_token': csrf_token}
 
 
-#@view_config(route_name='confirmation', renderer='templates/confirmation.pt')
 @view_config(route_name='confirmation', renderer='templates/confirmation.jinja2')
 def confirmation_page(request):
 
