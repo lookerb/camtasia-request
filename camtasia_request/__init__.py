@@ -12,7 +12,8 @@ def main(global_config, **settings):
         # Need to determine how to use https on campus server
         httponly=True
         )
-
+    #prefix = '/camtasia-request-dev'
+    prefix = ''
     config = Configurator(
         session_factory=session_factory,
         settings=settings)
@@ -20,10 +21,10 @@ def main(global_config, **settings):
     config.include('pyramid_mailer')
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_route('/', '/')
-    config.add_route('logout', '/logout')
-    config.add_route('login', '/login')
+    config.add_route('logout', prefix + '/logout')
+    config.add_route('login', prefix + '/login')
     config.add_route('auth', '/auth')
-    config.add_route('request', '/request')
-    config.add_route('confirmation', '/confirmation')
+    config.add_route('request', prefix + '/request')
+    config.add_route('confirmation', prefix + '/confirmation')
     config.scan()
     return config.make_wsgi_app()

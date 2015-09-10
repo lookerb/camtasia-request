@@ -44,10 +44,10 @@ def login(request):
     '''
     csrf_token = request.session.get_csrf_token()
 
-    auth_callback = '{0}://{1}:{2}{3}'.format(
+    auth_callback = '{0}://{1}{2}'.format(
         request.registry.settings['SCHEME'],
         request.registry.settings['HOST'],
-        request.registry.settings['PORT'],
+        #request.registry.settings['PORT'],
         request.registry.settings['AUTH_ROUTE']
         )
 
