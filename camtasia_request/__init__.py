@@ -8,9 +8,8 @@ def main(global_config, **settings):
     """
     session_factory = SignedCookieSessionFactory(
         urandom(64),
-        secure=False, #CURRENTLY CAUSING KEY ERROR ACCESSING SESSION VALUE WHEN TRUE 
-        # Need to determine how to use https on campus server
-        httponly=True
+        secure=True,
+        httponly=True #hides cookie from JavaScript
         )
     #prefix = '/camtasia-request-dev'
     prefix = ''

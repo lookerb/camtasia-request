@@ -1,3 +1,49 @@
+.web-app {
+	background-color: #fff;
+	padding: 20px;
+}
+
+.web-app p {
+	font-size: 1.3rem;
+}
+
+.web-app label {
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+.formHelp {
+	font-size: 1.3rem;
+	padding-left: 25px;
+}
+
+.course ul{
+	list-style-type: none;
+}
+
+textarea#courseName.shorterTextArea {
+	max-width: 50%;
+	margin-left: 25px;
+}
+
+textarea#location.shorterTextArea {
+	max-width: 50%;
+	margin-left: 25px;
+}
+
+.web-app select#expiration {
+	width: 150px;
+	margin-left: 25px;
+}
+
+.web-app dd {
+	font-size: 1.3rem;
+}
+
+.dept-name {
+	text-align:center;
+}
+
 .app_error {
     color: red;
     font-size: medium;

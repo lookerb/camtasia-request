@@ -1,260 +1,319 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="uwoshApp">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" type="text/css" href="{{ request.static_url('camtasia_request:static/styles.css') }}">
-  <link rel="stylesheet" type="text/css" media="screen" href="https://www.uwosh.edu/english/portal_css/Responsive%20Theme/reset-cachekey-dbf369b96ddbaad432b189b6bb4f4f26.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="https://www.uwosh.edu/english/portal_css/Responsive%20Theme/base-cachekey-8b7878f3f8ffbb81b8fbf56633897e6a.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.uwosh.edu/english/portal_css/Responsive%20Theme/resourcetinymce.stylesheetstinymce-cachekey-cfe781e5849c1d9afd42ddf4579c21da.css" />
-<style type="text/css">@import url(https://www.uwosh.edu/english/portal_css/Responsive%20Theme/responsivetheme-cachekey-80066145583ee2d488b9720e248b229f.css);</style>
-  <link rel="stylesheet" type="text/css" href="https://www.uwosh.edu/english/portal_css/Responsive%20Theme/mediaqueries-cachekey-f25c6d4caedae0abbabbc57791e18772.css" />
-<style type="text/css">@import url(https://www.uwosh.edu/english/portal_css/Responsive%20Theme/uwosh_theme-cachekey-81b257c0b3ba2188923bbb318082ad2a.css);</style>
-<style type="text/css" media="all">@import url(https://www.uwosh.edu/english/portal_css/Responsive%20Theme/resourceContentWellPortlets.stylesContentWellPortlets-cachekey-1d36466da1b53b5cc585693902b3eeb2.css);</style>
-<style type="text/css">@import url(https://www.uwosh.edu/english/portal_css/Responsive%20Theme/font-awesomecssfont-awesome-cachekey-9c5ed5bb83edb594ba319111f5a8d623.css);</style>
-<style type="text/css">@import url(https://www.uwosh.edu/english/portal_css/Responsive%20Theme/collapsedHeading-cachekey-1726dbad520d73a170388a1687deecf5.css);</style>
-  <link rel="stylesheet" type="text/css" media="all" href="https://www.uwosh.edu/english/portal_css/Responsive%20Theme/ploneCustom-cachekey-5fa808de21967a205482d1e463a2a28b.css" />
-<style type="text/css">@import url(https://www.uwosh.edu/english/portal_css/Responsive%20Theme/site.css);</style>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/resourceplone.app.jquery-cachekey-a349a981cba32ef05582a95cb7c310cc.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/resourcecollapsiblelists-cachekey-0d3f693dca1ae2cd992a912b966ef69b.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/resourcecollective.responsivetheme.javascriptsrespond.src-cachekey-d631379352ba19326529d79e43cb700e.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/resourcecollective.responsivetheme.javascriptsplone-rwd-nav-cachekey-449b7f36bc697c74a6fd3b4308429160.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/resourcecollective.responsivetheme.javascriptsios-orientationchange-fix-cachekey-98cc4834a443631adfbaeb4d317823ec.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/resourcejsi18n-cachekey-0a293c6fcb04dd90729d794e93085e18.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/ios-orientationchange-fix-ios5-cachekey-75bd2690127daa5c63d8e82fdb01ebd4.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/topNavDropDown-cachekey-c941c6d7aba8316d4189a6eae4dfb894.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/plone-rwd-nav2-cachekey-5ae2817e185673d092a61bbf05ec6ed0.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/responsiveTables-cachekey-fe57551352e0da161224caabc71b6329.js"></script>
-<script type="text/javascript" src="https://www.uwosh.edu/english/portal_javascripts/Responsive%20Theme/kss-bbb-cachekey-8662d94bbc4fae82019009b7cdb9ef3d.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="https://www.uwosh.edu/english/favicon.ico" />
-  <link rel="apple-touch-icon" href="https://www.uwosh.edu/english/touch_icon.png" /><script type="text/javascript">
-        jQuery(function($){
-            $.datepicker.setDefaults(
-                jQuery.extend($.datepicker.regional[''],
-                {dateFormat: 'mm/dd/yy'}));
-        });
-</script>
-<title>IT -- Camtasia Setup Request</title>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css" />
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="https://www.uwosh.edu/english/++theme++diazo/css/uwo-diazo-tweaks.css" media="screen" />
+<!DOCTYPE html>
+<!--[if IE 9 ]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
+
+
+<!--[if IE 9]><html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js page--home" lang="en">
+
+  <head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>UW Oshkosh Camtasia Request</title>
+  <meta name="description" content="The University of Wisconsin Oshkosh is the third largest university in the state with nearly 14,000 students. UW Oshkosh offers 60 undergraduate degrees, more than 100 minors, 15 graduate programs and a doctoral program, and supports 21 intercollegiate athletics sports teams. Our 1,700 employees make UW Oshkosh a leader in education, leadership, responsiveness, service and sustainability, and our more than 83,000 alumni take their Titan pride with them worldwide. UW Oshkosh is your place to find your path, grow your world, learn to lead and succeed.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" href="{{ request.static_url('camtasia_request:static/uwosh.css') }}">
+  <link rel="stylesheet" href="{{ request.static_url('camtasia_request:static/styles.css') }}"
+
+  <link rel="icon" type="image/ico" href="https://www.uwosh.edu/favicon.ico">
+
+
 </head>
-<body class="template-only_show_body_view portaltype-document site-English section-home userrole-anonymous"><nav class="navbar navbar-inverse" role="navigation"><div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#university-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="university-nav">
-        <ul class="nav navbar-nav"><li><a href="http://www.uwosh.edu/about-uw-oshkosh" id="aboutToggle" class="aboutLink">About</a></li>
-          <li><a href="http://www.uwosh.edu/academics" id="academicsToggle" class="academicsLink">Academics</a></li>
-          <li><a href="http://www.titans.uwosh.edu/" id="athleticsToggle" class="athleticsLink">Athletics</a></li>
-          <li><a href="http://www.uwosh.edu/alumni" id="alumniToggle" class="alumniLink">Alumni</a></li>
-          <li><a href="http://www.uwosh.edu/study-at-uw-oshkosh" id="admissionsToggle" class="admissionsLink">Admissions</a></li>
-          <li><a href="http://www.uwosh.edu/administration" id="administrationToggle" class="administrationLink">Administration</a></li>
-          <li><a href="http://www.uwosh.edu/resources" id="resourcesToggle" class="resourcesLink">Resources</a></li>
-          <li><a href="http://www.uwosh.edu/calendars" id="calendarsToggle" class="calendarsLink">Calendars</a></li>
-          <li class="dropdown"><a href="http://www.uwosh.edu/titan-services" id="titanServicesToggle" class="titanServicesLink dropdown-toggle" data-toggle="dropdown">Titan Services <b class="caret"></b></a>
-            <ul id="university-nav-titan-services" class="dropdown-menu text-left"><li><a href="http://www.uwosh.edu/site-index" class="tsSiteIndex">Site Index</a></li>
-              <li><a href="http://www.uwosh.edu/directory" class="tsDirectory">Directory</a></li>
-              <li><a href="http://www.uwosh.edu/registrar/titanweb/" class="tsTitanWeb">Titan Web</a></li>
-              <li><a href="http://www.uwosh.edu/titanapps/" class="tsTitanApps">Titan Apps</a></li>
-              <li><a href="https://titanfiles.uwosh.edu/xythoswfs/webview/xythoslogin.action" class="tsTitanFiles">Titan Files</a></li>
-              <li><a href="https://my.wisconsin.edu/" class="tsMyUwSystem">My UW System</a></li>
-              <li><a href="http://www.uwosh.edu/d2l/" class="tsD2L">Desire2Learn (D2L)</a></li>
-              <li><a href="http://www.uwosh.edu/library/" class="tsLibrary">Polk Library</a></li>
-              <li><a href="http://www.uwosh.edu/myuwo/" class="tsMyUwo">MyUWO</a></li>
-              <li><a href="https://uwosh.collegiatelink.net/" class="tsStudentClubs">Student Clubs &amp; Orgs</a></li>
-              <li><a href="https://www.myinterfase.com/uwosh/student/" class="tsTitanJobs">Titan Jobs</a></li>
-            </ul></li>
-        </ul></div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav><div id="visual-portal-wrapper">
-    <header role="banner"><div class="container">
-        <div class="row header-row">
-          <div class="col-sm-24 col-md-4 wordmark-wrapper">
-            <a id="wordmarkLink" href="http://www.uwosh.edu">
-              <img src="{{ request.static_url('camtasia_request:static/wordmark.png')}} " class="wordmark" alt="University of Wisconsin Oshkosh wordmark. Links to home page." /></a>
-          </div>
-          <div class="col-sm-24 col-md-20">
-            <div class="row">
-              <div class="col-sm-24 quickLinks-wrapper">
 
-                <ul id="quickLinksDesktop" class="list-inline"><li><a href="https://www.gmail.com" target="_blank" class="quicklinksEmail">Email</a></li>
-                  <li><a href="http://www.uwosh.edu/library" class="quicklinksLibrary">Polk Library</a></li>
-                  <li><a href="http://www.uwosh.edu/directory" class="quicklinksDirectory">Directory</a></li>
-                  <li><a href="http://www.uwosh.edu/d2l/" class="quicklinksD2L">D2L</a></li>
-                  <li><a href="https://my.wisconsin.edu/" class="quicklinksMyUwSystem">My UW System</a></li>
-                  <li><a href="https://emergency.uwosh.edu/" class="quicklinksSafety">Safety</a></li>
 
-                </ul></div>
-              <div class="hiddenStructure" id="portal-advanced-search">
-        <a href="https://www.uwosh.edu/english/@@search" accesskey="5">
-            Advanced Search…
-        </a>
+  <body>
+    <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav role="navigation" class="tab-bar hide-tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#" ><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <form id="cse-search-box" action="https://www.uwosh.edu/search">
+          <input type="hidden" name="cx" value="007334596040304417000:1pnst7hkwe0" />
+          <input type="hidden" name="ie" value="UTF-8" />
+          <input type="text" name="q" size="31" class="radius site-search-field" />
+          <button type="submit" name="sa" class="button postfix"><i class="fa fa-search"></i></button>
+        </form>
+      </section>
+
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#" ><span></span></a>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu hide-tab-bar" role="navigation" aria-hidden="true">
+      <ul id="off-canvas-left" class="off-canvas-list">
+        <li class="off-canvas__label">UW Oshkosh</li>
+        <li><a href="https://www.uwosh.edu/about-uw-oshkosh" class="aboutLink">About</a></li>
+        <li><a href="https://www.uwosh.edu/academics" class="academicsLink">Academics</a></li>
+        <li><a href="https://www.titans.uwosh.edu/" class="athleticsLink">Athletics</a></li>
+        <li><a href="https://www.uwosh.edu/alumni" class="alumniLink">Alumni</a></li>
+        <li><a href="https://www.uwosh.edu/study-at-uw-oshkosh" class="admissionsLink">Admissions</a></li>
+        <li><a href="https://www.uwosh.edu/administration" class="administrationLink">Administration</a></li>
+        <li><a href="https://www.uwosh.edu/resources" class="resourcesLink">Resources</a></li>
+        <li><a href="https://www.uwosh.edu/calendars" class="calendarsLink">Calendars</a></li>
+        <li class="has-submenu"><a href="#" class="titanServicesLink">Titan Services</a>
+          <ul id="off-canvas-left-titan" class="left-submenu">
+            <li class="back"><a href="#">Back</a></li>
+            <li><a href="https://www.uwosh.edu/site-index" class="tsSiteIndex">Site Index</a></li>
+            <li><a href="https://www.uwosh.edu/directory" class="tsDirectory">Directory</a></li>
+            <li><a href="https://www.uwosh.edu/registrar/titanweb/" class="tsTitanWeb">Titan Web</a></li>
+            <li><a href="https://www.uwosh.edu/titanapps" class="tsTitanApps">Titan Apps</a></li>
+            <li><a href="https://titanfiles.uwosh.edu/xythoswfs/webview/xythoslogin.action" class="tsTitanFiles">Titan Files</a></li>
+            <li><a href="https://my.wisconsin.edu/" class="tsMyUwSystem">My UW System</a></li>
+            <li><a href="https://www.uwosh.edu/d2l/" class="tsD2L">Desire2Learn (D2L)</a></li>
+            <li><a href="https://www.uwosh.edu/library/" class="tsLibrary">Polk Library</a></li>
+            <li><a href="https://www.uwosh.edu/myuwo/" class="tsMyUwo">MyUWO</a></li>
+            <li><a href="https://uwosh.collegiatelink.net/" class="tsStudentClubs">Student Clubs &amp; Orgs</a></li>
+            <li><a href="https://www.uwosh.edu/titanjobs" class="tsTitanJobs">Titan Jobs</a></li>
+          </ul>
+        </li>
+        <li class="off-canvas__label">Quicklinks</li>
+        <li><a href="https://www.gmail.com" target="_blank" class="quicklinksEmail">Email</a></li>
+        <li><a href="https://www.uwosh.edu/library" class="quicklinksLibrary">Polk Library</a></li>
+        <li><a href="https://www.uwosh.edu/directory" class="quicklinksDirectory">Directory</a></li>
+        <li><a href="https://www.uwosh.edu/d2l/" class="quicklinksD2L">D2L</a></li>
+        <li><a href="https://my.wisconsin.edu/" class="quicklinksMyUwSystem">My UW System</a></li>
+        <li><a href="https://emergency.uwosh.edu" class="quicklinksSafety">Safety</a></li>
+        <li><a href="https://www.uwosh.edu/forward/leadership-council/" class="quicklinksLeadershipCouncil">Leadership Council</a></li>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+      <!-- content goes here -->
+
+
+    <div class="hide-top-bar">
+      <nav class="top-bar" role="navigation" data-topbar>
+        <ul class="title-area">
+          <li class="name"></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="left">
+            <li><a href="https://www.uwosh.edu/about-uw-oshkosh" id="aboutToggle" class="aboutLink">About</a></li>
+            <li><a href="https://www.uwosh.edu/academics" id="academicsToggle" class="academicsLink">Academics</a></li>
+            <li><a href="https://www.titans.uwosh.edu/" id="athleticsToggle" class="athleticsLink">Athletics</a></li>
+            <li><a href="https://www.uwosh.edu/alumni" id="alumniToggle" class="alumniLink">Alumni</a></li>
+            <li><a href="https://www.uwosh.edu/study-at-uw-oshkosh" id="admissionsToggle" class="admissionsLink">Admissions</a></li>
+            <li><a href="https://www.uwosh.edu/administration" id="administrationToggle" class="administrationLink">Administration</a></li>
+            <li><a href="https://www.uwosh.edu/resources" id="resourcesToggle" class="resourcesLink">Resources</a></li>
+            <li><a href="https://www.uwosh.edu/calendars" id="calendarsToggle" class="calendarsLink">Calendars</a></li>
+            <li class="has-dropdown"><a href="https://www.uwosh.edu/titan-services" id="titanServicesToggle" class="titanServicesLink">Titan Services</a>
+              <ul id="university-nav-titan-services" class="dropdown text-left">
+                <li><a href="https://www.uwosh.edu/site-index" class="tsSiteIndex">Site Index</a></li>
+                <li><a href="https://www.uwosh.edu/directory" class="tsDirectory">Directory</a></li>
+                <li><a href="https://www.uwosh.edu/registrar/titanweb/" class="tsTitanWeb">Titan Web</a></li>
+                <li><a href="https://www.uwosh.edu/titanapps/" class="tsTitanApps">Titan Apps</a></li>
+                <li><a href="https://titanfiles.uwosh.edu/xythoswfs/webview/xythoslogin.action" class="tsTitanFiles">Titan Files</a></li>
+                <li><a href="https://my.wisconsin.edu/" class="tsMyUwSystem">My UW System</a></li>
+                <li><a href="https://www.uwosh.edu/d2l/" class="tsD2L">Desire2Learn (D2L)</a></li>
+                <li><a href="https://www.uwosh.edu/library/" class="tsLibrary">Polk Library</a></li>
+                <li><a href="https://www.uwosh.edu/myuwo/" class="tsMyUwo">MyUWO</a></li>
+                <li><a href="https://uwosh.collegiatelink.net/" class="tsStudentClubs">Student Clubs &amp; Orgs</a></li>
+                <li><a href="https://www.uwosh.edu/titanjobs" class="tsTitanJobs">Titan Jobs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section><!-- /.top-bar-section -->
+      </nav><!-- /.navbar -->
     </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-24">
-                <h1 id="siteTitle">Information Technology</h1>
-              </div>
-            </div>
+
+
+
+
+
+<header role="banner">
+  <div class="container">
+    <div class="audience-row">
+      <div class="row">
+        <div class="large-4 medium-4 small-24 small-centered medium-uncentered columns wordmark-wrapper">
+          <h1 class="school-title">University of Wisconsin Oshkosh</h1>
+          <a href="https://www.uwosh.edu" id="wordmarkLink"><img src="https://www.uwosh.edu/img/parts/wordmark-large.png" class="wordmark" alt="University of Wisconsin Oshkosh wordmark. Links to home page." /></a>
+        </div>
+
+        <div class="small-24 columns quicklinks text-right hide-top-bar">
+          <div class="quicklinks-wrapper">
+            <ul class="inline-list show-for-medium-up quicklinks">
+              <li class="bump"><a href="https://www.gmail.com" target="_blank" class="quicklinksEmail">Email</a></li>
+              <li class="bump"><a href="https://www.uwosh.edu/library" class="quicklinksLibrary">Polk Library</a></li>
+              <li class="bump"><a href="https://www.uwosh.edu/directory" class="quicklinksDirectory">Directory</a></li>
+              <li class="bump"><a href="https://www.uwosh.edu/d2l/" class="quicklinksD2L">D2L</a></li>
+              <li class="bump"><a href="https://my.wisconsin.edu/" class="quicklinksMyUwSystem">My UW System</a></li>
+              <li class="bump"><a href="https://emergency.uwosh.edu" class="quicklinksSafety">Safety</a></li>
+              <li class="bump"><a href="https://www.uwosh.edu/forward/leadership-council/" class="quicklinksLeadershipCouncil">Leadership Council</a></li>
+              <li class="has-form"><form id="cse-search-box" action="https://www.uwosh.edu/search" class="show-for-medium-up">
+  <input type="hidden" name="cx" value="007334596040304417000:1pnst7hkwe0" />
+  <input type="hidden" name="ie" value="UTF-8" />
+  <input type="text" name="q" size="31" class="radius site-search-field" />
+  <button type="submit" name="sa" class="button postfix"><i class="fa fa-search"></i></button>
+</form>
+</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="small-24 columns audience-nav hide-top-bar">
+          <h1 class="dept-name">Camtasia Setup Request</h1>
+        </div>
+
+      </div><!-- /.row -->
+    </div><!-- /.audience-row -->
+
+  </div><br><!-- /.container -->
+</header>
+
+
+    <main role="main" id="main">
+      <div>
+
+   <div class="show-for-small-up">
+<div class="social-container">
+  <div class="row">
+    <div class="large-24 columns">
+    <!-- Portal for web app to populate -->
+    <div class="web-app">
+
+        {% if request.session.peek_flash() %}
+          {% for message in request.session.pop_flash() %}
+            <div class="app_flash">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+  </div><!-- /.col-lg-12 -->
+  </div><br><!-- /.row -->
+
+</div><!-- /.social-container -->
+
+  </div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.uwosh.edu",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.uwosh.edu/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</div>
+
+    </main>
+
+    <div class="tagline text-center">
+  <span>The University of Wisconsin Oshkosh &mdash; Where Excellence and Opportunity Meet.</span>
+</div>
+
+<div class="footer-container">
+  <div class="container">
+
+    <footer class="row" role="contentinfo">
+
+      <div class="medium-8 large-8 columns">
+        <div class="row">
+          <div class="small-8 medium-8 large-8 columns">
+            <a href="https://www.uwosh.edu/go/directions" target="_blank" class="footerMap"><img src="https://www.uwosh.edu/img/parts/wismap-color.png" class="wismap left desaturate" alt="Map of Wisconsin" /></a>
+          </div>
+          <div class="small-16 medium-16 large-16 columns">
+            <span class="copyright">&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> UW Board of Regents</span>
+            <address class="vcard">
+  <div class="fn">University of Wisconsin Oshkosh</div>
+  <div class="adr">
+    <div class="street-address">800 Algoma Blvd.</div>
+    <span class="locality">Oshkosh</span>, <span class="region">WI</span> <span class="postal-code">54901</span>
+  </div>
+  <div class="tel">
+    <a href="tel:9204241234" class="footerPhone">(920) 424-1234</a>
+  </div>
+</address>
+
           </div>
         </div>
       </div>
-    </header><div class="container">
-      <div class="row">
-        <nav class="navbar navbar-default navbar-site" role="navigation"><div class="navbar-header">
-             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="navbar-brand">Navigation</span>
-            </button>
+
+      <div class="medium-8 large-8 columns">
+        <div class="row">
+          <div class="medium-11 large-11 columns footer-links">
+            <ul id="footerLinks" class="no-bullet">
+              <li><a href="https://www.uwosh.edu/resources/accessibility" class="footerAccessibility">Accessibility &amp; Privacy</a></li>
+              <li><a href="https://www.uwosh.edu/career/" class="footerCareer">Career Services</a></li>
+              <li><a href="https://uwosh.edu/go/directions" target="_blank" class="footerDirections">Get Directions</a></li>
+              <li><a href="https://www.uwosh.edu/foundation/support-uw-oshkosh" class="footerGive">Give to UW Oshkosh</a></li>
+              <li><a href="https://www.uwosh.edu/imc/media-relations" class="footerMedia">Media Relations</a></li>
+              <li><a href="https://www.uwosh.edu/usp" class="footerUSP">University Studies Program</a></li>
+              <li><a href="https://www.uwosh.edu/acad-supp">Academic Support of Inclusive Excellence</a></li>
+              <li><a href="https://www.uwosh.edu/hr/why-work-at-uwo" class="footerWork">Work at UW Oshkosh</a></li>
+              <li><a href="https://www.uwosh.edu/affirm-act/notice-of-nondiscrimination" class="footerNon">Notice of Nondiscrimation</a></li>
+            </ul>
           </div>
-
-          <div class="collapse navbar-collapse" id="site-nav">
-            <ul class="nav navbar-nav" id="site-nav-items"><li class="plain"><a href="http://it.uwosh.edu" title="">Home</a></li><li class="plain"><a href="http://it.uwosh.edu/about-us/" title="">About Us</a></li><li class="plain"><a href="http://it.uwosh.edu/students/" title="">For Students</a></li><li class="plain"><a href="http://it.uwosh.edu/for-faculty-and-staff/" title="">For Faculty and Staff</a></li><li class="plain"><a href="http://it.uwosh.edu/for-visitors-and-alumni/" title="">For Visitors and Alumni</a></li><li class="plain"><a href="http://it.uwosh.edu/our-services/" title="">Our Services</a></li></ul></div>
-        </nav></div>
-    </div>
-
-    <script type="text/javascript">
-      var navHtml = jq("#top_level_navigation").html();
-      jq("#top_level_navigation").remove();
-      //jq("body").prepend('<div id="top_level_navigation"></div>');
-      //jq("#top_level_navigation").html(navHtml);
-    </script>
-
-    <div class="container">
-      <div class="row" id="portlets-in-header">
-         
-             
-                 <div class="cell InHeaderPortletManager1 width-full position-0">
-
-
-<div class="portletWrapper kssattr-portlethash-436f6e74656e7457656c6c506f72746c6574732e496e486561646572506f72746c65744d616e61676572310a636f6e746578740a2f456e676c6973682f686f6d650a686561646572" id="portletwrapper-436f6e74656e7457656c6c506f72746c6574732e496e486561646572506f72746c65744d616e61676572310a636f6e746578740a2f456e676c6973682f686f6d650a686561646572"><div class="portletStaticText portlet-static-slider-and-ctas"><div class="row">
-<div class="col-xs-24 col-md-16 hidden-xs">
-
-
-<!-- Begin web app content -->
-  <div id="content">
-    <h1 class="documentFirstHeading">Camtasia Setup Request</h1>
-      {% if request.session.peek_flash() %}
-        {% for message in request.session.pop_flash() %}
-          <div class="app_flash">{{ message }}</div>
-        {% endfor %}
-      {% endif %}
-    {% block content %}
-    {% endblock %}
-  </div>
-<!-- End web app content -->
-</div>
-
-<div class="col-xs-24 col-md-8">
-<h2 class="cta cta--blue"><a href="https://kb.uwosh.edu" title="">KnowledgeBase</a></h2>
-<h2 class="cta cta--blue"><a href="http://it.uwosh.edu/student-technology-center/" title="">Technology Centers</a></h2>
-<div class="contact-box">
-<h4>Contact Us</h4>
-<p>Information Technology <br /> Phone: (920) 424-3020 <br /> Email: <a class="email-link" href="mailto:helpdesk@uwosh.edu" target="_self" title="">helpdesk@uwosh.edu</a> <br /><a title="" href="http://it.uwosh.edu/contact-us" target="_self">View more IT contact information…</a></p>
-</div>
-</div>
-</div></div>
-
-</div>
-
-</div> 
-             
-         
-    </div>
-    </div>
-
-
-    <div class="tagline text-center">
-      <span>The University of Wisconsin Oshkosh — Where Excellence and Opportunity Meet.</span>
-    </div>
-    <div class="footer-container">
-      <div class="container">
-        <footer class="row" role="contentinfo"><div class="col-md-8 col-lg-8">
-            <div class="row">
-              <div class="col-sm-8 col-md-8 col-lg-8 hidden-xs hidden-sm">
-                <a href="http://www.uwosh.edu/go/directions" target="_blank" class="footerMap"><img src="/english/++theme++diazo/img/wismap-color.png" class="wismap left desaturate" alt="Map of Wisconsin" /></a>
-              </div>
-              <div class="col-sm-16 col-md-16 col-lg-16">
-                <span class="copyright">©<script type="text/javascript">document.write(new Date().getFullYear());</script> UW Board of Regents</span>
-                <address class="vcard">
-                  <div class="fn">University of Wisconsin Oshkosh</div>
-                  <div class="adr">
-                    <div class="street-address">800 Algoma Blvd.</div>
-                    <span class="locality">Oshkosh</span>, <span class="region">WI</span> <span class="postal-code">54901</span>
-                  </div>
-                  <div class="tel">
-                    <a href="/english/++theme++diazo/tel:9204241234" class="footerPhone">(920) 424-1234</a>
-                  </div>
-                </address>
-              </div>
-            </div>
-
+          <div class="medium-13 large-13 columns">
+            <ul class="no-bullet">
+              <li class="app-icon--footer">
+                <a href="https://www.uwosh.edu/imc/web-new-media/mobile" class="footerMobile">
+                  <img src="https://www.uwosh.edu/img/parts/mobileapp-color.png" class="app-icon left desaturate" alt="UW Oshkosh mobile app icon"> Download UW&nbsp;Oshkosh's Mobile App
+                </a>
+              </li>
+              <li>
+                <a href="https://emergency.uwosh.edu/" class="footerEmergency">
+                  <img src="https://www.uwosh.edu/img/parts/emergency-color.png" class="app-icon left desaturate" alt="Emergency and Safety Information icon"> Emergency and Safety&nbsp;Information
+                </a>
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
 
-          <div class="col-md-8 col-lg-8">
-            <div class="row">
-              <div class="col-md-11 col-lg-11 footer-links">
-                <ul id="footerLinks" class="list-unstyled"><li><a href="http://www.uwosh.edu/resources/accessibility" class="footerAccessibility">Accessibility and Privacy</a></li>
-                  <li><a href="http://www.uwosh.edu/career/" class="footerCareer">Career Services</a></li>
-                  <li><a href="http://uwosh.edu/go/directions" target="_blank" class="footerDirections">Get Directions</a></li>
-                  <li><a href="http://www.uwosh.edu/foundation/support-uw-oshkosh" class="footerGive">Give to UW Oshkosh</a></li>
-                  <li><a href="http://www.uwosh.edu/imc/media-relations" class="footerMedia">Media Relations</a></li>
-                  <li><a href="http://www.uwosh.edu/usp" class="footerUSP">University Studies Program</a></li>
-                  <li><a href="http://www.uwosh.edu/hr/why-work-at-uwo" class="footerWork">Work at UW Oshkosh</a></li>
-                </ul></div>
-              <div class="col-md-13 col-lg-13">
-                <div class="media">
-                  <a class="pull-left" href="http://www.uwosh.edu/imc/web-new-media/mobile">
-                    <img src="/english/++theme++diazo/img/mobileapp-color.png" class="app-icon desaturate" alt="UW Oshkosh mobile app icon" /></a>
-                  <div class="media-body">
-                    Download UW Oshkosh's Mobile App
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="pull-left" href="http://emergency.uwosh.edu/">
-                    <img src="/english/++theme++diazo/img/emergency-color.png" class="app-icon desaturate" alt="Emergency and Safety Information icon" /></a>
-                  <div class="media-body">
-                    Emergency and Safety Information
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
+      <div class="medium-8 large-8 columns">
+        <div class="row social-row">
+          <ul id="footerSocialLinks" class="small-block-grid-7">
+            <li><a href="https://www.facebook.com/uwoshkosh" target="_blank" class="footerFacebook"><img src="https://www.uwosh.edu/img/icons/icon-facebook.png" class="social-icon desaturate" alt="Facebook logo" /></a></li>
+            <li><a href="https://twitter.com/uwoshkosh" target="_blank" class="footerTwitter"><img src="https://www.uwosh.edu/img/icons/icon-twitter.png" class="social-icon desaturate" alt="Twitter logo" /></a></li>
+            <li><a href="https://instagram.com/uwoshkosh" target="_blank" class="footerInstagram"><img src="https://www.uwosh.edu/img/icons/icon-instagram.png" class="social-icon desaturate" alt="Instagram logo" /></a></li>
+            <li><a href="https://www.youtube.com/uwosh" target="_blank" class="footerYouTube"><img src="https://www.uwosh.edu/img/icons/icon-youtube.png" class="social-icon desaturate" alt="YouTube logo" /></a></li>
+            <li><a href="https://www.linkedin.com/edu/school?id=19693" target="_blank" class="footerLinkedIn"><img src="https://www.uwosh.edu/img/icons/icon-linkedin.png" class="social-icon desaturate" alt="LinkedIn logo" /></a></li>
+            <li><a href="https://www.pinterest.com/uwoadmissions" target="_blank" class="footerPinterest"><img src="https://www.uwosh.edu/img/icons/icon-pinterest.png" class="social-icon desaturate" alt="Pinterest logo" /></a></li>
+            <li><a href="https://www.flickr.com/photos/uwoshkosh/sets/" target="_blank" class="footerFlickr"><img src="https://www.uwosh.edu/img/icons/icon-flickr.png" class="social-icon desaturate" alt="Flickr logo" /></a></li>
+          </ul>
+        <div class="row">
+          <div class="small-9 columns">
+            <a href="https://www.collegeportraits.org/WI/UW-Oshkosh" target="_blank" class="footerCollegePortrait"><img class="college-portrait-logo" src="https://www.uwosh.edu/img/parts/college-portrait.png" alt="College Portrait logo" /></a>
           </div>
-
-          <div class="col-md-8 col-lg-8">
-            <div class="row social-row">
-              <ul id="footerSocialLinks" class="col-sm-block-grid-7"><li><a href="https://www.facebook.com/uwoshkosh" target="_blank" class="footerFacebook"><img src="/english/++theme++diazo/img/icon-facebook.png" class="social-icon desaturate" alt="Facebook logo" /></a></li>
-                <li><a href="https://twitter.com/uwoshkosh" target="_blank" class="footerTwitter"><img src="/english/++theme++diazo/img/icon-twitter.png" class="social-icon desaturate" alt="Twitter logo" /></a></li>
-                <li><a href="http://instagram.com/uwoshkosh" target="_blank" class="footerInstagram"><img src="/english/++theme++diazo/img/icon-instagram.png" class="social-icon desaturate" alt="Instagram logo" /></a></li>
-                <li><a href="http://www.youtube.com/uwosh" target="_blank" class="footerYouTube"><img src="/english/++theme++diazo/img/icon-youtube.png" class="social-icon desaturate" alt="YouTube logo" /></a></li>
-                <li><a href="http://www.linkedin.com/edu/school?id=19693" target="_blank" class="footerLinkedIn"><img src="/english/++theme++diazo/img/icon-linkedin.png" class="social-icon desaturate" alt="LinkedIn logo" /></a></li>
-                <li><a href="http://www.pinterest.com/uwoadmissions" target="_blank" class="footerPinterest"><img src="/english/++theme++diazo/img/icon-pinterest.png" class="social-icon desaturate" alt="Pinterest logo" /></a></li>
-                <li><a href="http://www.flickr.com/photos/uwoshkosh/sets/" target="_blank" class="footerFlickr"><img src="/english/++theme++diazo/img/icon-flickr.png" class="social-icon desaturate" alt="Flickr logo" /></a></li>
-              </ul><div class="row">
-              <div class="col-sm-9">
-                <a href="http://www.collegeportraits.org/WI/UW-Oshkosh" target="_blank" class="footerCollegePortrait"><img class="college-portrait-logo" src="/english/++theme++diazo/img/college-portrait.png" alt="College Portrait logo" /></a>
-              </div>
-              <div class="col-sm-7">
-                <a href="http://www.ncahlc.org/?option=com_directory&amp;Action=ShowBasic&amp;instid=2030" target="_blank" class="footerHLC"><img src="/english/++theme++diazo/img/hlc.png" alt="Higher Learning Commission logo" /></a>
-              </div>
-              <div class="col-sm-8">
-                <a href="http://www.wisconsin.edu/" target="_blank" class="footerUwSystem"><img src="/english/++theme++diazo/img/uw-system.png" class="footer__icon--uw-system" alt="University of Wisconsin System logo" /></a>
-              </div>
-            </div>
+          <div class="small-7 columns">
+            <a href="https://www.ncahlc.org/?option=com_directory&Action=ShowBasic&instid=2030" target="_blank" class="footerHLC"><img src="https://www.uwosh.edu/img/parts/hlc.png" alt="Higher Learning Commission logo" /></a>
           </div>
+          <div class="small-8 columns">
+            <a href="https://www.wisconsin.edu/" target="_blank" class="footerUwSystem"><img src="https://www.uwosh.edu/img/parts/uw-system.png" class="footer__icon--uw-system" alt="University of Wisconsin System logo" /></a>
+          </div>
+        </div>
+      </div>
 
-        
-      </div><!-- /.container -->
-    </footer></div><!-- /.footer-container -->
+    </footer>
+
+  </div><!-- /.container -->
+</div><!-- /.footer-container -->
+
+    </section><!-- End off-canvas stuff -->
+
+  <a class="exit-off-canvas hide-for-large-up"></a></section><!-- End off-canvas stuff -->
+
+  </div><!-- End off-canvas stuff -->
+</div><!-- End off-canvas stuff -->
 
 
-  </div><!-- /#visual-portal-wrapper -->
+    <!--Production JS-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script src="{{ request.static_url('camtasia_request:static/uwosh.min.js') }}"></script>-->
 
-</div></body></html>
+  </body>
+</html>
