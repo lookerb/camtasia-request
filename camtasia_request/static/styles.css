@@ -12,13 +12,13 @@
 	font-size: 1.4rem;
 }
 
+.web-app ul{
+	list-style-type: none;
+}
+
 .formHelp {
 	font-size: 1.3rem;
 	padding-left: 25px;
-}
-
-.course ul{
-	list-style-type: none;
 }
 
 textarea#courseName.shorterTextArea {
