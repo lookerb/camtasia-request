@@ -73,7 +73,9 @@ class RequestForm(Form):
     # select field for date after which files will not be needed on the server
     expiration = SelectField("Expiration Date",
         description="We'd like to know how long you want the files to stay on the server. We won't make a habit of deleting them, but this will make it easier when we have to. Deletion will occur no earlier than the term specified.",
-        default="Do Not Delete",
-        choices=get_expiration_choices())
+        default='Pick a semester',
+        choices=get_expiration_choices(),
+        validators=[validators.NoneOf('Pick a semester', message="Please select an expiration date.")]
+        )
 
     

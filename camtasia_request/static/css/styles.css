@@ -1,4 +1,74 @@
+div.white-background {
+	background-color: #fff;
+}
+
+.web-app {
+	background-color: #fff;
+	padding: 20px;
+}
+
+.web-app p {
+	font-size: 1.3rem;
+}
+
+.web-app label {
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+.web-app ul {
+	list-style-type: none;
+	font-size: 1.3rem;
+}
+
+.formHelp {
+	font-size: 1.3rem;
+	padding-left: 25px;
+}
+
+.courseHelp p{
+	font-size: 1.3rem;
+	padding-left:25px;
+	font-weight: bold;
+}
+
+ul#course{
+	list-style-type: none;
+	padding-left: 15px;
+}
+
+ul#course li label {
+	font-weight: normal;
+}
+
+textarea#courseName.shorterTextArea {
+	max-width: 50%;
+	margin-left: 25px;
+}
+
+textarea#location.shorterTextArea {
+	max-width: 50%;
+	margin-left: 25px;
+}
+
+.web-app select#add_form-sessionLength {
+	width: 250px;
+}
+
+.web-app dd {
+	font-size: 1.3rem;
+}
+
 .page-head {
 	text-align:center;
 }
 
+.app_error {
+    color: red;
+    font-size: medium;
+}
+
+.app_flash {
+    color: red;
+    font-size: medium;
+}
