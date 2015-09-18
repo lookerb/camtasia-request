@@ -48,7 +48,6 @@ def login(request):
     auth_callback = '{0}://{1}{2}'.format(
         request.registry.settings['SCHEME'],
         request.registry.settings['HOST'],
-        #request.registry.settings['PORT'],
         request.registry.settings['AUTH_ROUTE']
         )
 
@@ -56,7 +55,6 @@ def login(request):
             host=request.registry.settings['LMS_HOST'], 
             client_app_url=auth_callback,
             encrypt_request=request.registry.settings['ENCRYPT_REQUESTS'])
-    print request.scheme # CHECKING FOR HTTPS
     return {'auth_url': auth_url, 'csrf_token': csrf_token}
 
 
@@ -65,7 +63,6 @@ def request_form(request):
     '''
     Generates and processes request form.
     '''
-    #session = request.session
     csrf_token = request.session.get_csrf_token()
 
     if 'uc' in request.session:
@@ -94,9 +91,6 @@ def request_form(request):
 
         return {'form': form, 'csrf_token': csrf_token}
 
-    print request.scheme #CHECKING FOR HTTPS
-
-    #if request.method == 'POST' and form.validate():
     if 'form_submit' in request.POST and form.validate():
         process_form(form, request.session)
 
@@ -122,9 +116,6 @@ def confirmation_page(request):
     name = request.session['firstName'] + ' ' + request.session['lastName']
     sender = request.registry.settings['mail.username']
 
-    # remove for production
-    submitter_email = 'lookerb@uwosh.edu'
-
     message = Message(subject="Relay account setup",
         sender=sender,
         recipients=[sender,submitter_email])
@@ -142,7 +133,6 @@ def confirmation_page(request):
     mailer = get_mailer(request)
     mailer.send_immediately(message, fail_silently=False)
     
-    print request.scheme #CHECKING FOR HTTPS
     return {
         'csrf_token': csrf_token,
         'name': name,
@@ -171,9 +161,7 @@ def store_user_data(session, userData):
     session['firstName'] = userData['FirstName']
     session['lastName'] = userData['LastName']
     session['userId'] = userData['Identifier']
-    '''PRODUCTION: UNCOMMENT FOLLOWING LINE AND DELETE THE ONE AFTER THAT'''
-    #session['uniqueName'] = userData['UniqueName']
-    session['uniqueName'] = 'lookerb'
+    session['uniqueName'] = userData['UniqueName']
 
 
 def get_semester_code():
