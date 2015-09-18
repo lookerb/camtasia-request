@@ -25,7 +25,7 @@ class RequestForm(Form):
             semester = 'Spring'
         else: # month is between
             semester = 'Summer'
-        choices = ['Do Not Delete', semester + " " + str(year)]
+        choices = [semester + " " + str(year)]
         while len(choices) < 10:
             if semester == 'Fall':
                 year += 1
@@ -41,7 +41,7 @@ class RequestForm(Form):
     # gets list of courses for selection
     
     course = RadioField('Select course',
-        description="Which course do you want a profile for on the Camtasia Relay server?",
+        description="Which course do you want a profile for on the lecture capture server?",
         validators=[validators.InputRequired(message="You must select a course")],
         coerce=int
         )
