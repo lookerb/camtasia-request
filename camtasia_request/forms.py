@@ -25,7 +25,7 @@ class RequestForm(Form):
             semester = 'Spring'
         else: # month is between
             semester = 'Summer'
-        choices = [semester + " " + str(year)]
+        choices = ['Pick a semester', semester + " " + str(year)]
         while len(choices) < 10:
             if semester == 'Fall':
                 year += 1
@@ -42,7 +42,7 @@ class RequestForm(Form):
     
     course = RadioField('Select course',
         description="Which course do you want a profile for on the lecture capture server?",
-        validators=[validators.InputRequired(message="You must select a course")],
+        validators=[validators.InputRequired(message="Please select a course")],
         coerce=int
         )
     
@@ -59,12 +59,12 @@ class RequestForm(Form):
     # text field for recording location
     location = TextAreaField("Recording Location",
         description="The room number of the classroom you'll be teaching from. We ask so we can check to ensure the software and a working mic is installed. If you are planning on recording from your office or home let us know that here as well.",
-        validators=[validators.InputRequired(message="You must enter a location--classroom, office, or home.")])
+        validators=[validators.InputRequired(message="Please enter a location--classroom, office, or home.")])
 
     # text field for course name - in case D2L provided coursename is unsatisfactory
     courseName = TextAreaField("Course Name",
         description="Course Name as you would like it to appear. (ie Virology, Intro to Early Civ, Pathophysiology II)",
-        validators=[validators.InputRequired(message="You must enter a course name")]
+        validators=[validators.InputRequired(message="Please enter a course name")]
         )
 
     # text box for additional comments

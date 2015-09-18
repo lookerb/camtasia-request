@@ -24,12 +24,20 @@ div.white-background {
 .formHelp {
 	font-size: 1.3rem;
 	padding-left: 25px;
+	margin-bottom: 20px;
 }
 
 .courseHelp p{
 	font-size: 1.3rem;
 	padding-left:25px;
 	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.boxHelp {
+	font-size: 1.3rem;
+	padding-left: 25px;
+	margin-bottom: 0px;
 }
 
 ul#course{
@@ -39,6 +47,14 @@ ul#course{
 
 ul#course li label {
 	font-weight: normal;
+}
+
+.web-app input {
+	margin-bottom: 0px;
+}
+.web-app input.context {
+	font-weight: 1.2rem;
+	margin-bottom: 10px;
 }
 
 textarea#courseName.shorterTextArea {
@@ -51,8 +67,10 @@ textarea#location.shorterTextArea {
 	margin-left: 25px;
 }
 
-.web-app select#add_form-sessionLength {
-	width: 250px;
+.web-app select#expiration {
+	width: 30%;
+	margin-left: 25px;
+	font-size: 1.3rem;
 }
 
 .web-app dd {
