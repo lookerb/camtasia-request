@@ -1,5 +1,4 @@
 BTrees==4.1.2
-
 Jinja2==2.7.3
 Mako==1.0.1
 MarkupSafe==0.23
@@ -14,7 +13,7 @@ ZODB==4.1.0
 ZODB3==3.11.0
 argparse==1.2.1
 beautifulsoup4==4.3.2
-camtasia-request==0.0
+-e git+https://github.com/lookerb/camtasia-request.git@8a05f66bb430ec8c13031542b3506f6287091f77#egg=camtasia_request-master
 gevent==1.0.2
 greenlet==0.4.7
 gunicorn==19.3.0
